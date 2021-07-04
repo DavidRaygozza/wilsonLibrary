@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background-color:white;
+}
+
+/* 6/1/21 DReilly - Introduced root tag with the ULV theme colors as variables */
+:root {
+    --color-dark-green: hsl(133, 30%, 25%);
+    --color-orange: hsl(31, 100%, 50%);
+    --color-gold: hsl(41, 87%, 57%);
+    --color-gray: hsl(0, 0%, 20%);
+    --color-white: hsl(0, 100%, 100%);
+
+    --dimen-top-height: 47px;
+    --dimen-header-nav-height: 92px;
+    --dimen-wrapper-width: 1050px;
+}
+
+a:hover svg path{
+   fill: var(--color-orange);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*removed positioning from here*/
+#top {
+    display: flex;
+    /*position: absolute;*/
+    justify-content: center;
+
+    top: 0;
+    margin: 0;
+
+    width: 100%;
+    height: var(--dimen-top-height);
+    font-family: "arial, sans-serif";
+    font-weight: bold;
+    background: var(--color-gray);
+}
+
+#top-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: var(--dimen-wrapper-width);
+    height: 100%;
+}
+
+/*removed positioning from here*/
+#top-wrapper a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+
+    padding: 0 10px;
+    /*position: relative;*/
+    
+    color: var(--color-white);
+    font-size: 0.8em;
+
+    transition: color 0.3s;
+}
+
+#top-wrapper a:hover {
+    color: var(--color-gold);
+}
+
+#top-wrapper ul {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+}
+
+.dropdown {
+    display: none;
+}
+
+#top-wrapper ul li {
+    align-self: center;
+    align-items: center;
+}
+
+#top-wrapper ul:first-child {
+    height: 100%;
+    align-self: center;
+    align-items: center;
+}
+
+#top-wrapper ul li:hover .dropdown {
+    display: block;
+    position: absolute;
+    z-index: 0;
+
+    width: 200px;
+
+    color: var(--color-gray);
+    background: var(--color-white);
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown a {
+    margin: 0;
+    padding: auto;
+    width: 100%;
+}
+
+.dropdown li {
+    color: #333;
+}
+
+/*removed positioning from here*/
+#header-nav {
+    /*position: absolute;*/
+    display: flex;
+    justify-content: center;
+
+    top: var(--dimen-top-height);
+    margin: 0;
+
+    width: 100%;
+    height: var(--dimen-header-nav-height);
+
+    background-color: #FFF;
+}
+
+#header-nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    justify-self: center;
+
+    max-width: var(--dimen-wrapper-width);
+    height: 100%;
+}
+
+#header-nav-content a {
+    text-decoration: none;
+}
+
+header {
+    padding-right: 200px;
+}
+
+/*my code changes START from HERE */
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    width:100%vw;
+    height: 50vh;
+    background-image: url("https://library.laverne.edu/wp-content/uploads/sites/74/2018/08/20180130_Campus_Setups_WV_0004-1200x853.jpg");
+    background-size: cover;
+    background-position:center
+}
+
+#headerText{
+    color:white;
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1em;
+    text-align:center;
+    text-shadow: 2px 4px 5px #000;
+}
+
+.search-box{
+    text-align:center;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.form-control {
+    margin-top: 1.75em;
+    margin-right: 1.5vw;
+    width: 66.6%;
+    height: 1.25em;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.428571429;
+    color: #302c29;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#go{
+    background-color: #ff8200;
+    border-color: #ff8200;
+    height: 2.1em;
+    color:white;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight:bold;
+    border-radius: 4px;
+    box-shadow: none;
+    border:0;
+
+}
+
+#go:hover{
+    background-color: #0093b2;
+}
+
+#go:active{
+    background-color: #2c5234;
+}
+
+/*must create a break pooint for this whne reaches mobile view to push more in to the right*/
+.scholarly-article {
+    margin-left: 4vw;
+    margin-top: 1.5vh;
+    color:white;
+    text-align:left;
+}
+/*my code changes END from HERE */
+
+
+nav {
+    height: 100%;
+    align-items: center;
+    font-family: "arial, sans-serif";
+}
+
+nav ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    height: 100%;
+}
+
+nav ul li {
+    color: var(--color-dark-green);
+    position: relative;
+    margin: 0 32px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--color-dark-green);
+    font-size: 0.9em;
+    font-weight: bold;
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--color-orange);
+}
+
+.dropdown {
+    display: none;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    position: absolute;
+    left: 25%;
+    top: 100%;
+    background: var(--color-white);
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin: 0;
+    padding:0;
+    border-bottom: #cacaca solid 1px;
+}
+
+.dropdown ul a {
+    padding: 10px;
+    margin:0;
+    color: gray;
+    font-size: 0.8em;
+    width: 265px;
+    white-space: nowrap;
+
+    /*added invisible border so that the items don't move when hovered*/
+    border-left: #FFF solid 4px;
+}
+
+.dropdown ul a:hover{
+    color: var(--color-dark-green);
+    border-left: var(--color-dark-green) solid 4px;
+}
+
+
+/*search bar code starts here*/
+/*find out what they do with the li and ul's*/
+
+#searchButtonItem {
+    margin: 0;
+    padding: 0;
+}
+
+.closedSearchForm {
+    width: 50px;
+    height: 100%;
+    background: var(--color-dark-green);
+}
+
+#searchButton{
+    color: white;
+    display: block;
+}
+
+#closeSearchButton{
+    color: white;
+    display:none;
+}
+
+#mega_search{
+    display:none;
+    width: 65vw;
+}
+
+.openSearchForm{
+    width: 65vw;
+    position: relative;
+    right: 55vw;
+    height: var(--dimen-header-nav-height);
+    bottom: 35%;
+}
+
+fieldset{
+    background-color: var(--color-dark-green);
+    color: white;
+    border: 0;
+}
+
+/*search bar code ends here*/
+
+
+main {
+    align-content: center;
+    z-index: 2;
+}
+
+footer {
+    padding: 25px 2vw;
+    background: var(--color-dark-green);
+
+    display: flex;
+    flex-direction: column wrap;
+    justify-content: space-between;
+
+    color: #FFF;
+}
+
+footer a {
+    color: #FFF;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-gold);
+}
+
+footer div ul {
+    list-style-type: none;
+}
+
+footer div ul li {
+    margin-bottom: 10px;
+}
+
+#footerText{
+    color:#CACACA;
+}
+
+ul#iconList {
+    width: 80%;
+}
+
+ul#iconList a{
+    display:inline-block;
+}
+
+/* create a breakpoint for tablet veiw to remove margin from these elemnts so they fir in one row*/
+ul#iconList a img{
+    display:inline-block;
+    margin: 10px 10px 0 0;
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid white;
+    border-radius: 10000px;
+}
+
+ul#iconList a img:hover{
+    border: 2px solid orange;
+}
+
+ul#iconList a:hover{
+    border: 2px solid var(--color-gold);
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --dimen-top-height: 47px;
+        --dimen-header-nav-height: 7.7vw;
+        --dimen-wrapper-width: 1200px;
+    }
+    
+    header {
+        padding-right: 0;
+    }
+    
+    #header-nav-wrapper {
+        width: 97%;
+        justify-self: center;
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    nav ul li a {
+        font-size: 1.2vw;
+    }
+
+    #searchButtonDiv {
+        width: 70px;
+    }
+}
+
+
+
+/*
+.menu .search-form {
+    background: #2c5234 none repeat scroll 0 0;
+    margin-left: 50px;
+}
+@media (min-width: 768px){
+    .main-navigation .search-form {
+        background-color: transparent;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 99%;
+        will-change: left;
+        transition: left 300ms ease;
+    }
+}
+.main-navigation .search-form {
+    background-color: #2c5234;
+    padding: .75em;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+
+@media (min-width: 768px){
+    NAV.main-navigation>ul>li:last-child a {
+    display: inline-block;
+    transition: transform 250ms ease;
+    color: #fff;
+    font-size: 1.5em;
+    width: 86%;
+    text-align: center;
+    vertical-align: middle;
+    }
+}
+
+
+NAV.main-navigation>ul>li:last-child a {
+    display: none;
+}
+
+@media (min-width: 768px){
+    NAV.main-navigation>ul>li>a {
+        display: inline-block;
+    }
+}
+[role=button] {
+    cursor: pointer;
+}
+
+span.fa, span.fas, span.fab {
+    font-size: 1px;
+    line-height: 1px;
+}
+.no-tab * {
+    outline: 0px solid transparent !important;
+}
+.fa, .fas, .far, .fal, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa, .fas {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+span.fa:before, span.fas:before, span.fab:before {
+    font-size: 16px;
+    line-height: 1em;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.no-tab * {
+    outline: 0px solid transparent !important;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (min-width: 768px){
+    NAV.main-navigation>ul>li:last-child::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #2c5234;
+        transform: skewX(0deg);
+        z-index: -1;
+    }
+}
+
+
+
+@media (min-width: 768px){
+    style.css:22201.search-open NAV.main-navigation>ul>li:last-child a {
+    transform: rotate(90deg);
+    }
+}
+@media (min-width: 768px){
+    style.css:22197NAV.main-navigation>ul>li:last-child a:hover {
+    color: #ff8200;
+    }
+}
+
+@media (min-width: 768px){
+    NAV.main-navigation>ul>li:last-child a {
+    display: inline-block;
+    transition: transform 250ms ease;
+    color: #fff;
+    font-size: 1.5em;
+    width: 86%;
+    text-align: center;
+    vertical-align: middle;
+    }
+}
+
+.main-navigation>ul>li:last-child a {
+    display: none;
+}
+
+
+@media (min-width: 768px){
+    style.css:21895NAV.main-navigation>ul>li>a {
+    display: inline-block;
+    }
+}
+
+
+a:hover, a:focus {
+    color: #0093b2;
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline: 0;
+}
+a:hover, a:focus {
+    color: #0093b2;
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline: 0;
+}
+[role=button] {
+    cursor: pointer;
+}
+*/
