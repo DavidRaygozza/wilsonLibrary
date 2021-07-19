@@ -20,7 +20,7 @@ body, html {
 
     --dimen-top-height: 47px;
     --dimen-header-nav-height: 13vh;
-    --dimen-wrapper-width: 1050px;
+    --dimen-wrapper-width: 1150px;
 }
 
 a:hover svg path{
@@ -144,6 +144,7 @@ a {
 }
 
 #header-nav-wrapper {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -240,6 +241,7 @@ header {
 
 
 nav {
+    width: 100%;
     height: 100%;
     align-items: center;
     font-family: "arial, sans-serif";
@@ -363,7 +365,7 @@ fieldset{
 #first-name-search, #last-name-search{
     display: none;
     border-radius: 0;
-    width: 28vw;
+    width: 27vw;
     margin: 0;
 }
 
@@ -481,8 +483,7 @@ ul#iconList a:hover{
 @media only screen and (max-width: 1200px) {
     :root {
         --dimen-top-height: 47px;
-        --dimen-header-nav-height: 7.7vw;
-        --dimen-wrapper-width: 1200px;
+        --dimen-header-nav-height: 8vw;
     }
     
     header {
@@ -506,9 +507,28 @@ ul#iconList a:hover{
     nav ul li a {
         font-size: 1.2vw;
     }
+    
+    #mega_search{
+        width: 80vw;
+        right: 76vw;
+    }
+    
+    .input-group.cse input{
+        padding: 0.1em 0;
+        width: 70vw;
+    }
+    
+    #searchButton, #closeSearchButton{
+        top: 3vw;
+    }
+    
+    #first-name-search, #last-name-search{
+        width: 35vw;
+        margin:0;
+    }
 
-    #searchButtonDiv {
-        width: 6vw;
+    .input-group-addon-button {
+        height: 2.3em;
     }
 }
 

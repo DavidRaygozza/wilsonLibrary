@@ -15,12 +15,26 @@ function searchClick(){
     document.getElementById("searchButton").style.display="none";
     document.getElementById("closeSearchButton").style.display="block";
     document.getElementById("mega_search").style.display="block";
+    $("header").css({"margin-right": "15vw"});
+    
+    function responsive(maxWidth) {
+      if (maxWidth.matches) {
+          $("#svgHeader").css({"width": "60%"});
+      } else {
+          $("#svgHeader").css({"width": "125%"});
+      }
+    }
+     var maxWidth = window.matchMedia("(max-width: 1200px)");
+     responsive(maxWidth);
+     maxWidth.addListener(responsive);
 }
 
 function closeSesrchClick(){
     document.getElementById("closeSearchButton").style.display="none";
     document.getElementById("searchButton").style.display="block";
     document.getElementById("mega_search").style.display="none";
+    $("header").css({"margin-right": "0"});
+    $("#svgHeader").css({"width": "100%"});
 }
 
 function peopleClicked(){
