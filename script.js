@@ -3,7 +3,7 @@ function hovered(x) {
 }
         
 function unhovered(x) {
-  x.style.background = "white";
+    x.style.background = "white";
 }
 
 function searchPrimo() {
@@ -24,9 +24,9 @@ function searchClick(){
           $("#svgHeader").css({"width": "125%"});
       }
     }
-     var maxWidth = window.matchMedia("(max-width: 1200px)");
-     responsive(maxWidth);
-     maxWidth.addListener(responsive);
+    var maxWidth = window.matchMedia("(max-width: 1200px)");
+    responsive(maxWidth);
+    maxWidth.addListener(responsive);
 }
 
 function closeSesrchClick(){
@@ -38,15 +38,30 @@ function closeSesrchClick(){
 }
 
 function peopleClicked(){
-    $('#desktop-search').css({"display":"none"});
-    $('#first-name-search').css({"display":"flex"});
-    $('#last-name-search').css({"display":"flex"});
-    $('#mega_search').attr("action", "https://laverne.edu/directory/faculty-staff-search/");
+    $('.desktop-search').css({"display":"none"});
+    $('.first-name-search').css({"display":"flex"});
+    $('.last-name-search').css({"display":"flex"});
+    $('.mega_search').attr("action", "https://laverne.edu/directory/faculty-staff-search/");
 }
 
 function siteClicked(){
-    $('#mega_search').attr("action", "https://library.laverne.edu");
-    $('#desktop-search').css({"display":"flex"});
-    $('#first-name-search').css({"display":"none"});
-    $('#last-name-search').css({"display":"none"});
+    $('.mega_search').attr("action", "https://library.laverne.edu");
+    $('.desktop-search').css({"display":"flex"});
+    $('.first-name-search').css({"display":"none"});
+    $('.last-name-search').css({"display":"none"});
+}
+
+function toggleMobileNav() {
+    var icon = document.getElementById("hamburgerContainer");
+    if (icon.classList.contains('change')) {
+        $('#mobileNav').css({ "display": "block"});
+    }else {
+        $('#mobileNav').css({ "display": "none" });
+    }
+}
+
+
+function hamburger(x) {
+    x.classList.toggle("change");
+    toggleMobileNav();
 }
