@@ -740,11 +740,12 @@ ul#iconList a:hover{
         align-items: center;
     }
 
-    #mobileBottomNav ul > li > div {
-        height: 100%;
-        width: 47.33px;
-        position: fixed;
-        float: right;
+    #mobileBottomNav > div > ul > li > a {
+        transition: color 0.25s;
+    }
+
+    #mobileBottomNav > div > ul > li > a:hover {
+        color:hsl(41, 87%, 57%);
     }
 
     .mdropdown-b {
@@ -757,6 +758,11 @@ ul#iconList a:hover{
         background-color: white;
         border: 1px solid black;
         border-top: none;
+    }
+
+    #drop {
+        position: relative;
+        float: right;
     }
 
     /*Daniel stop working on nav's herey*/
