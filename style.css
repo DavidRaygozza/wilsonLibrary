@@ -765,6 +765,94 @@ ul#iconList a:hover{
         float: right;
     }
 
+    /*start here*/
+    #mobileNavHeader {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        width: auto;
+        background-color: #FFF;
+        height: 8.5vh;
+        padding: .5em 1em 0 1em;
+    }
+
+    .mega_search {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        position: static;
+        background-color: var(--color-dark-green);
+        height: 12vh;
+    }
+
+    .input-group.cse {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .input-group.cse input {
+        border-radius: 0;
+        margin: 0;
+        width: 85vw;
+    }
+
+    #first-name-search2, #last-name-search2 {
+        width: 40vw;
+        display: none;
+        margin: 0;
+    }
+
+    #site-people-radios{
+        margin-right: 4vw;
+    }
+
+    .hamburgerContainer {
+        display: inline-block;
+        cursor: pointer;
+        height: 4vh;
+        position: absolute;
+        right: 5%;
+        top: 3.5vh;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 4px;
+        background-color: var(--color-dark-green);
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-405deg) translate(-6px, 4px);
+        transform: rotate(-405deg) translate(-6px, 4px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(405deg) translate(-7px, -6px);
+        transform: rotate(405deg) translate(-7px, -6px);
+    }
+
+    /*Daniel start working on nav's here, change id & class names accordingly*/
+
+    #mobileTopNav {
+        background-color: #FFF;
+        height: 25vh;
+    }
+    #mobileBottomNav {
+        height: 38vh;
+        background-color: #ebebeb;
+    }
+
     /*Daniel stop working on nav's herey*/
 
 
@@ -778,7 +866,7 @@ ul#iconList a:hover{
     #hero div {
         max-width: 100%;
     }
-    
+  
     .search-box{
        width: 100vw;
     }
