@@ -60,8 +60,51 @@ function toggleMobileNav() {
     }
 }
 
-
 function hamburger(x) {
     x.classList.toggle("change");
     toggleMobileNav();
+}
+
+
+
+
+
+
+function toggleMobileTopDrops(x) {
+    let idName = x.parentElement.nextElementSibling;
+    if (x.classList.contains('toggleMobileDropDown')) {
+        idName.style.display = "block";
+    } else {
+        idName.style.display = "none";
+    }
+}
+
+function toggleMobileDrop(x) {
+    x.classList.toggle("toggleMobileDropDown");
+    x.classList.toggle("toggleMobileDropUp");
+
+    var content = x.firstElementChild;
+    content.classList.toggle("up");
+    content.classList.toggle("down");
+
+    toggleMobileTopDrops(x);
+}
+
+
+
+
+function toggleMobileBottomDrops(x) {
+    let idName = x.nextElementSibling;
+    if (x.classList.contains('toggleMobileDropDown')) {
+        idName.style.display = "block";
+    } else {
+        idName.style.display = "none";
+    }
+}
+
+function toggleMobileBottomNav(x) {
+    x.classList.toggle("toggleMobileDropDown");
+    x.classList.toggle("toggleMobileDropUp");
+
+    toggleMobileBottomDrops(x);
 }

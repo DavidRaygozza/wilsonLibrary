@@ -130,7 +130,6 @@
                                     </fieldset>
                                 </form>
                             </div>
-
                         </li>
                     </ul>
                 </nav>
@@ -188,11 +187,11 @@
                             <div>
                                 <a href="" class="topLinks">Services</a>
                             </div>
-                            <div onclick="toggleMobileDrop()">
-                                <p>D</p>
+                            <div class = "toggleMobileDropUp" onclick="toggleMobileDrop(this)">
+                                <p id="content1" class="down">^</p>
                             </div>
                         </div>
-                        <div class="mdropdown-a drop1">
+                        <div class="mdropdown-a drop1" id="mobileDrop1">
                             <ul>
                                 <li><a href="">Academic Technology Support</a></li>
                                 <li><a href="">Archives and Special Collections</a></li>
@@ -211,11 +210,11 @@
                             <div>
                                 <a href="" class="topLinks">Research Help</a>
                             </div>
-                            <div onclick="toggleMobileDrop2()">
-                                <p>D</p>
+                            <div class="toggleMobileDropUp" onclick="toggleMobileDrop(this)">
+                                <p id="content2" class="down">^</p>
                             </div>
                         </div>
-                        <div class="mdropdown-a drop2">
+                        <div class="mdropdown-a drop2" id="mobileDrop2">
                             <ul>
                                 <li><a href="">Appointment with a Librarian</a></li>
                                 <li><a href="">Chat with Us 24/7</a></li>
@@ -231,11 +230,11 @@
                             <div>
                                 <a href="" class="topLinks">About Us</a>
                             </div>
-                            <div onclick="toggleMobileDrop3()">
-                                <p>D</p>
+                            <div class="toggleMobileDropUp" onclick="toggleMobileDrop(this)">
+                                <p id="content3" class="down">^</p>
                             </div>
                         </div>
-                        <div class="mdropdown-a drop3">
+                        <div class="mdropdown-a drop3" id="mobileDrop3">
                             <ul>
                                 <li><a href="">Employment</a></li>
                                 <li><a href="">Hours</a></li>
@@ -254,10 +253,10 @@
                 <div>
                     <ul>
                         <li>
-                            <a href="">
+                            <a class="toggleMobileDropUp" id ="informationForDiv" onclick="toggleMobileBottomNav(this)">
                                 Information For:
-                                <div id="drop"> 
-                                    <p>D</p>
+                                <div id="informationForToggler">
+                                    <p class="down">^</p>
                                 </div>
                             </a>
                             <div class="mdropdown-b">
@@ -280,7 +279,6 @@
                         </li>
                         <li>
                             <a href="">Support Your Library</a>
-
                         </li>
                     </ul>
                 </div>
@@ -288,57 +286,9 @@
             <!--Daniel stop working on nav's here -->
 
         </div>
-      
-        <!-- begginning of mobile nav-->
-        <div id="mobileNavHeader">
-            <div>
-                <a class="hdr-logo-link" href="https://laverne.edu" rel="home" aria-label="University of La Verne" aria-describedby="home-logo-link-desc">
-                    <img src="headerSvg.svg" id="svgHeader">
-                </a>
-            </div>
-
-            <div class="hamburgerContainer" id ="hamburgerContainer" onclick="hamburger(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        </div>
-
-        <div id="mobileNav">
-            <form action="https://library.laverne.edu" method="get" id="mega_search2" class="mega_search" role="search">
-                <input type="hidden" name="cx" value="009285304065246230251:zwfshjeknsi">
-                <input type="hidden" name="cof" value="FORID:11">
-                <input type="hidden" name="ie" value="UTF-8">
-                <input type="hidden" name="sa" value="Search">
-
-                <fieldset>
-                    <div class="input-group cse" role="group" aria-labelledby="cse-search-desc">
-                        <input type="text" class="form-control desktop-search" placeholder="Enter search terms" id="desktop-search2" name="q" aria-labelledby="mega-search-query-label" aria-required="true">
-                        <input type="text" class="form-control first-name-search" placeholder="First Name" id="first-name-search2" name="first_name">
-                        <input type="text" class="form-control last-name-search" placeholder="Last Name" id="last-name-search2" name="last_name">
-                        <button type="submit" class="input-group-addon-button" aria-label="Submit" tabindex="-1"></button>
-                    </div>
-
-                    <div id="site-people-radios" role="group" aria-labelledby="switch-mega-search-type">
-                        <label class="radio-inline"><input type="radio" name="search-target" id="search-target-site" value="site" onclick="siteClicked()" checked="checked">&nbsp;Site</label>
-                        <label class="radio-inline"><input type="radio" name="search-target" id="search-target-people" value="people" onclick="peopleClicked()">&nbsp;People</label>
-                    </div>
 
 
-                </fieldset>
-            </form>
 
-            <!--Daniel start working on nav's here, change id & class names accordingly-->
-            <div id="mobileTopNav">
-
-            </div>
-
-            <div id="mobileBottomNav">
-
-            </div>
-            <!--Daniel stop working on nav's here -->
-
-        </div>
 
 
         <main>
@@ -379,8 +329,8 @@
         </main>
 
         <footer>
-            <div>
-                <img src="images/Footer-Logo.png" style="width: 70%;"><br><br>
+            <div id="footerColumn1">
+                <img id="footerImage" src="images/Footer-Logo.png"><br><br>
                 <p>
                     Wilson Library<br>
                     2040 3rd Street
@@ -389,7 +339,8 @@
                 <p>(909) 448-4301</p><br><br>
                 <p id="footerText"><small>&copy; University of La Verne</small></p>
             </div>
-            <div>
+
+            <div id="footerColumn2">
                 <ul>
                     <li><a href="https://library.laverne.edu/library-404-error/">Renew Books</a></li>
                     <li><a href="https://laverne.libguides.com/archives">Archives and Special Collections</a></li>
@@ -398,7 +349,7 @@
                     <li><a href="https://laverne.libcal.com">Hours</a></li>
                 </ul>
             </div>
-            <div>
+            <div id="footerColumn3">
                 <h4>Information for:</h4><br>
                 <ul>
                     <li><a href="https://library.laverne.edu/faculty/">Faculty</a></li>
@@ -407,7 +358,35 @@
                     <li><a href="https://library.laverne.edu/visitors/">Visitors</a></li>
                 </ul>
             </div>
-            <div>
+
+
+
+
+
+
+
+            <div id="footerColumn2-3">
+                <div>
+                    <ul>
+                        <li><a href="https://library.laverne.edu/library-404-error/">Renew Books</a></li>
+                        <li><a href="https://laverne.libguides.com/archives">Archives and Special Collections</a></li>
+                        <li><a href="http://laverne.libguides.com/librarymakerspace">Makerspace</a></li>
+                        <li><a href="https://library.laverne.edu/about-us/library-a-z/">Library A-Z</a></li>
+                        <li><a href="https://laverne.libcal.com">Hours</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Information for:</h4><br>
+                    <ul>
+                        <li><a href="https://library.laverne.edu/faculty/">Faculty</a></li>
+                        <li><a href="https://library.laverne.edu/regional-online-students/">Regional and Online Students</a></li>
+                        <li><a href="http://laverne.libguides.com/alumni">Alumni</a></li>
+                        <li><a href="https://library.laverne.edu/visitors/">Visitors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="footerColumn4">
                 <h3>Connect with Wilson Library</h3>
                 <ul id="iconList">
                     <a href="https://www.facebook.com/ulavernelibrary">
@@ -436,6 +415,8 @@
 
                 </ul>
             </div>
+
+
         </footer>
     </body>
 </html>
