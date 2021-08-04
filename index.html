@@ -130,6 +130,7 @@
                                     </fieldset>
                                 </form>
                             </div>
+
                         </li>
                     </ul>
                 </nav>
@@ -137,6 +138,157 @@
         </div>
 
 
+        <!-- begginning of mobile nav-->
+        <div id="mobileNavHeader">
+            <div>
+                <a class="hdr-logo-link" href="https://laverne.edu" rel="home" aria-label="University of La Verne" aria-describedby="home-logo-link-desc">
+                    <img src="headerSvg.svg" id="svgHeader">
+                </a>
+            </div>
+
+            <div class="hamburgerContainer" id ="hamburgerContainer" onclick="hamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <div id="mobileNav">
+            <form action="https://library.laverne.edu" method="get" id="mega_search2" class="mega_search" role="search">
+                <input type="hidden" name="cx" value="009285304065246230251:zwfshjeknsi">
+                <input type="hidden" name="cof" value="FORID:11">
+                <input type="hidden" name="ie" value="UTF-8">
+                <input type="hidden" name="sa" value="Search">
+
+                <fieldset>
+                    <div class="input-group cse" role="group" aria-labelledby="cse-search-desc">
+                        <input type="text" class="form-control desktop-search" placeholder="Enter search terms" id="desktop-search2" name="q" aria-labelledby="mega-search-query-label" aria-required="true">
+                        <input type="text" class="form-control first-name-search" placeholder="First Name" id="first-name-search2" name="first_name">
+                        <input type="text" class="form-control last-name-search" placeholder="Last Name" id="last-name-search2" name="last_name">
+                        <button type="submit" class="input-group-addon-button" aria-label="Submit" tabindex="-1"></button>
+                    </div>
+
+                    <div id="site-people-radios" role="group" aria-labelledby="switch-mega-search-type">
+                        <label class="radio-inline"><input type="radio" name="search-target" id="search-target-site" value="site" onclick="siteClicked()" checked="checked">&nbsp;Site</label>
+                        <label class="radio-inline"><input type="radio" name="search-target" id="search-target-people" value="people" onclick="peopleClicked()">&nbsp;People</label>
+                    </div>
+
+
+                </fieldset>
+            </form>
+
+            <!--Daniel start working on nav's here, change id & class names accordingly-->
+            <div id="mobileTopNav">
+                <ul>
+                    <li>
+                        <a href="" class="topLinks">Library Home</a>
+                    </li>
+                    <li class="mdropdown-top">
+                        <div>
+                            <div>
+                                <a href="" class="topLinks">Services</a>
+                            </div>
+                            <div onclick="toggleMobileDrop()">
+                                <p>D</p>
+                            </div>
+                        </div>
+                        <div class="mdropdown-a drop1">
+                            <ul>
+                                <li><a href="">Academic Technology Support</a></li>
+                                <li><a href="">Archives and Special Collections</a></li>
+                                <li><a href="">Borrow from Other Libraries</a></li>
+                                <li><a href="">Compute, Print, Copy, Scan</a></li>
+                                <li><a href="">Course Reserves</a></li>
+                                <li><a href="">Makerspace</a></li>
+                                <li><a href="">Places to Study</a></li>
+                                <li><a href="">Reserve a Room</a></li>
+                                <li><a href="">Student Technology Request Form</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mdropdown-top">
+                        <div>
+                            <div>
+                                <a href="" class="topLinks">Research Help</a>
+                            </div>
+                            <div onclick="toggleMobileDrop2()">
+                                <p>D</p>
+                            </div>
+                        </div>
+                        <div class="mdropdown-a drop2">
+                            <ul>
+                                <li><a href="">Appointment with a Librarian</a></li>
+                                <li><a href="">Chat with Us 24/7</a></li>
+                                <li><a href="">Citing Sources</a></li>
+                                <li><a href="">Get Started</a></li>
+                                <li><a href="">Research Guides</a></li>
+                                <li><a href="">Tutorials</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mdropdown-top">
+                        <div>
+                            <div>
+                                <a href="" class="topLinks">About Us</a>
+                            </div>
+                            <div onclick="toggleMobileDrop3()">
+                                <p>D</p>
+                            </div>
+                        </div>
+                        <div class="mdropdown-a drop3">
+                            <ul>
+                                <li><a href="">Employment</a></li>
+                                <li><a href="">Hours</a></li>
+                                <li><a href="">Library A-Z</a></li>
+                                <li><a href="">Libraries & Learning Commons Directory</a></li>
+                                <li><a href="">Library Floor Maps</a></li>
+                                <li><a href="">Policies</a></li>
+                                <li><a href="">About Wilson Library</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="mobileBottomNav">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                Information For:
+                                <div id="drop"> 
+                                    <p>D</p>
+                                </div>
+                            </a>
+                            <div class="mdropdown-b">
+                                <ul>
+                                    <li><a href="">Faculty</a></li>
+                                    <li><a href="">Regional and Online Students</a></li>
+                                    <li><a href="">Alumni</a></li>
+                                    <li><a href="">Visitors</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">Ask Us</a>
+                        </li>
+                        <li>
+                            <a href="">Renew Books</a>
+                        </li>
+                        <li>
+                            <a href="">Interlibrary Loan Login</a>
+                        </li>
+                        <li>
+                            <a href="">Support Your Library</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Daniel stop working on nav's here -->
+
+        </div>
+      
         <!-- begginning of mobile nav-->
         <div id="mobileNavHeader">
             <div>
@@ -187,9 +339,6 @@
             <!--Daniel stop working on nav's here -->
 
         </div>
-
-
-
 
 
         <main>
