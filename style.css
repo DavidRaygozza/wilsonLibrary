@@ -521,9 +521,12 @@ ul#iconList a img:hover{
         width: 80vw;
         right: 76vw;
     }
-    
-    .input-group.cse input{
+
+    .input-group.cse input {
         padding: 0.1em 0;
+    }
+
+    .input-group.cse .desktop-search {
         width: 70vw;
     }
     
