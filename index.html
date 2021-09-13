@@ -11,7 +11,7 @@
     </head>
     
     <body>
-        <!-- begginning of desktop/'tablet nav-->
+        <!-- begginning of desktop/'tablet top nav-->
         <div id="top">
             <div id="top-wrapper">
                 <ul>
@@ -35,6 +35,7 @@
             </div>
         </div>
 
+                <!-- begginning of desktop/'tablet bottom nav-->
         <div id="header-nav">
             <div id="header-nav-wrapper">
                 <nav>
@@ -138,6 +139,8 @@
                             </div>
                         </li>
                         <li id="searchButtonItem">
+
+                        <!-- begginning of dynamic search form -->
                             <div id="searchButtonDiv" class="closedSearchForm">
                                 <p id="searchButton" onclick="searchClick()"><img src="searchSvg.svg" style="width: 1.5vw; margin: auto"></p>
                                 <p id="closeSearchButton" onclick="closeSesrchClick()">X</p>
@@ -171,7 +174,7 @@
         </div>
 
 
-        <!-- begginning of mobile nav-->
+        <!-- begginning of mobile nav header-->
         <div id="mobileNavHeader">
             <div>
                 <a class="hdr-logo-link" href="https://laverne.edu" rel="home" aria-label="University of La Verne" aria-describedby="home-logo-link-desc">
@@ -186,6 +189,7 @@
             </div>
         </div>
 
+        <!-- begginning of mobile dynamic search form-->
         <div id="mobileNav">
             <form action="https://library.laverne.edu" method="get" id="mega_search2" class="mega_search" role="search">
                 <input type="hidden" name="cx" value="009285304065246230251:zwfshjeknsi">
@@ -210,7 +214,7 @@
                 </fieldset>
             </form>
 
-            <!--Daniel start working on nav's here, change id & class names accordingly-->
+            <!-- begginning of mobile top nav-->
             <div id="mobileTopNav">
                 <ul>
                     <li class="mdropdown-top">
@@ -347,6 +351,7 @@
                 </ul>
             </div>
 
+            <!-- begginning of mobile bottom nav-->
             <div id="mobileBottomNav">
                 <div>
                     <ul>
@@ -381,19 +386,15 @@
                     </ul>
                 </div>
             </div>
-            <!--Daniel stop working on nav's here -->
-
         </div>
 
-
-
-
-
+        <!-- begginning of main hero section-->
         <main>
             <div id="hero">
                 <div>
                     <h1 id="headerText">Wilson Library</h1>
                     <div class="search-box">
+                        <!-- begginning of main search form-->
                         <form id="simple" name="searchForm" method="get" target="_self" action="https://laverne.primo.exlibrisgroup.com/discovery/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
                             <!-- Customizable Parameters -->
                             <input type="hidden" name="vid" value="01UOLV_INST:01UOLV">
@@ -426,6 +427,8 @@
             </div>
         </main>
 
+
+        <!-- begginning of footer section-->
         <footer>
             <div id="footerColumn1">
                 <img src="footerSvg.svg" id="footerImage">
@@ -462,7 +465,7 @@
 
 
 
-
+        <!-- begginning of footer columns that are used for mobile footer -->
             <div id="footerColumn2-3">
                 <div>
                     <ul>

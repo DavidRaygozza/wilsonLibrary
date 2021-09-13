@@ -10,7 +10,6 @@ body, html {
     background-color:white;
 }
 
-/* 6/1/21 DReilly - Introduced root tag with the ULV theme colors as variables */
 :root {
     --color-dark-green: hsl(133, 30%, 25%);
     --color-orange: hsl(31, 100%, 50%);
@@ -31,10 +30,8 @@ a {
     text-decoration: none;
 }
 
-/*removed positioning from here*/
 #top {
     display: flex;
-    /*position: absolute;*/
     justify-content: center;
 
     top: 0;
@@ -56,7 +53,6 @@ a {
     height: 100%;
 }
 
-/*removed positioning from here*/
 #top-wrapper > ul > li > a {
     display: flex;
     justify-content: center;
@@ -65,7 +61,6 @@ a {
     height: 100%;
 
     padding: 0 10px;
-    /*position: relative;*/
     
     color: var(--color-white);
     font-size: 0.8em;
@@ -286,7 +281,6 @@ nav ul {
 nav ul li {
     color: var(--color-dark-green);
     position: relative;
-    /* margin: 0 32px; Had to remove this because the new navigation items would not display on a single line */
     height: 100%;
 
     display: flex;
@@ -333,7 +327,6 @@ nav ul li:hover .dropdown.dd3 {
     padding: 10px;
     border-bottom: #cacaca solid 1px;
 
-    /*added invisible border so that the items don't move when hovered*/
     border-left: #FFF solid 4px;
 }
 
@@ -356,7 +349,6 @@ nav ul li:hover .dropdown.dd3 {
 }
 
 
-/*search bar code starts here*/
 
 #searchButtonItem {
     margin: 0;
@@ -455,7 +447,6 @@ fieldset{
     margin-top: 1%;
 }
 
-/*search bar code ends here*/
 
 
 main {
@@ -515,7 +506,6 @@ ul#iconList a{
     display:inline-block;
 }
 
-/* create a breakpoint for tablet veiw to remove margin from these elemnts so they fir in one row*/
 ul#iconList a{
     display:inline-block;
     margin: 10px 10px 0 0;
@@ -626,7 +616,6 @@ ul#iconList a:hover{
 
 @media only screen and (max-width: 768px) {
 
-    /*nav changes start here*/
 
     #header-nav{
         display: none;
@@ -636,7 +625,6 @@ ul#iconList a:hover{
         display: none;
     }
 
-    /*start here*/
     #mobileNavHeader {
         display: flex;
         flex-direction: row;
@@ -648,7 +636,6 @@ ul#iconList a:hover{
         padding: .5em 1em 0 1em;
     }
 
-    /* Vertically centered the University logo */
     #mobileNavHeader div:first-child {
         display: flex;
         align-items: center;
@@ -723,7 +710,6 @@ ul#iconList a:hover{
         max-width: 100%;
     }
 
-    /*Daniel start working on nav's here, change id & class names accordingly*/
 
     #mobileTopNav {
         display: block;
@@ -754,7 +740,6 @@ ul#iconList a:hover{
         border-bottom: none;
     }
 
-    /* Create space for the dropdown button */
     .mdropdown-top > div:first-child {
         display: grid;
         grid-template-columns: 1fr 53.33px;
@@ -764,7 +749,6 @@ ul#iconList a:hover{
         background-color: #4A7729;
         height: 100%;
         
-        /* Center the dropdown symbol */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -773,7 +757,6 @@ ul#iconList a:hover{
         cursor: pointer;
     }
 
-    /* The list is not 100% of the screen width, but it is centered */
     .mdropdown-a > ul {
         width: 95%;
         margin: auto;
@@ -902,8 +885,6 @@ ul#iconList a:hover{
         display: inline;
     }
 
-    /*Daniel stop working on nav's herey*/
-    /*nav changes end here*/
     #headerText {
         font-size: 3em;
         text-align: left;

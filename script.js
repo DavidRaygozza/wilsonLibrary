@@ -1,3 +1,4 @@
+// background color chnage functions for nav links
 function hovered(x) {
   x.style.background = "#DDD";
 }
@@ -6,11 +7,13 @@ function unhovered(x) {
     x.style.background = "white";
 }
 
+// submits main search form
 function searchPrimo() {
     document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
     document.forms["searchForm"].submit();
 }
 
+// opens dynamic nav search form
 function searchClick(){
     document.getElementById("searchButton").style.display="none";
     document.getElementById("closeSearchButton").style.display="block";
@@ -29,6 +32,7 @@ function searchClick(){
     maxWidth.addListener(responsive);
 }
 
+// closes dynamic nav search form
 function closeSesrchClick(){
     document.getElementById("closeSearchButton").style.display="none";
     document.getElementById("searchButton").style.display="block";
@@ -37,6 +41,7 @@ function closeSesrchClick(){
     $("#svgHeader").css({"width": "100%"});
 }
 
+// switches input fields in nav search form to query for people
 function peopleClicked(){
     $('.desktop-search').css({"display":"none"});
     $('.first-name-search').css({"display":"flex"});
@@ -44,6 +49,7 @@ function peopleClicked(){
     $('.mega_search').attr("action", "https://laverne.edu/directory/faculty-staff-search/");
 }
 
+// switches input fields in nav search form to query for books/library items
 function siteClicked(){
     $('.mega_search').attr("action", "https://library.laverne.edu");
     $('.desktop-search').css({"display":"flex"});
@@ -51,6 +57,7 @@ function siteClicked(){
     $('.last-name-search').css({"display":"none"});
 }
 
+// toggles mobile nav and hamburger icon
 function toggleMobileNav() {
     var icon = document.getElementById("hamburgerContainer");
     if (icon.classList.contains('change')) {
